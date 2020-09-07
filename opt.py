@@ -46,15 +46,14 @@ def train(x,y,w1,w2,rate,gen):
 
     for i in range(gen):
         
-        
         mw1 = mutate(w1,rate)
         mw2 = mutate(w2,rate)
 
         ff1 = feedforward(x,w1,w2) #parent
         ff2 = feedforward(x,mw1,mw2) #child
 
-        error_parent = np.sum(np.abs(y - ff1)) #parent cost
-        error_child = np.sum(np.abs(y - ff2)) #child cost
+        error_parent = np.sum(np.abs(y - ff1)) 
+        error_child = np.sum(np.abs(y - ff2)) 
 
         if error_child<error_parent:
             
@@ -70,11 +69,6 @@ def train(x,y,w1,w2,rate,gen):
 def main():
 
     tw1,tw2,err = train(X,y,w1,w2,0.03,1000)
-
-    res = np.tanh(X[0] @ w1)
-    res = res @ w2
-
-    print(res,y[0])
 
     plt.plot(err)
     plt.show()
