@@ -13,7 +13,7 @@ using genetic algorithm oprimization function in machine learning
 
 2, the child weights are mutated by a random value
 
-3. compute the loss function of the child and the parent
+3, compute the loss function of the child and the parent
 
 4, if the child loss is less than the parent it will update the weights
 
