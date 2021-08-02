@@ -1,5 +1,5 @@
 # genetic_algorithm
-using genetic algorithm oprimization function in machine learning
+using gradient free oprimization algorithms in machine learning
 
 
 ## TL;DR
